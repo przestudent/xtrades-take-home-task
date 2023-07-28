@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dot-background {
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0) 1%,
+            rgba(0, 0, 0, 1)), url("../public/dots-2.png"); */
+    /* background-image: url("/dots-2"); */
+    background-color: black;
+}
+
+/* .logo-bg {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 1%,
+            rgba(0, 0, 0, 1)), url("assets/Vector.svg");
+    background-repeat: space;
+} */
+.logo-bg {
+    mask-image: linear-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+    -webkit-mask-image: linear-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)))
+}
+
+
+.button-styler {
+    background: linear-gradient(116.59deg, #81EDB9 16.87%, #C2F0ED 86.01%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+    color: black;
+}
+
+/* 
+.logo-background{
+     background: linear-gradient(to top, rgba(0, 0, 0, 0) 1%,
+            rgba(0, 0, 0, 1)), url("assets/"); 
+            
+} */
+
+
+.dot-background1 {
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0) 1%,
+            rgba(0, 0, 0, 1)), url("../public/dots-2.png"); */
+    /* background-image: url("public/dots-2"); */
+}
+
+.dot-background2 {
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0) 1%,
+            rgba(0, 0, 0, 1)), url("../public/dots-2.png"); */
+    /* background-image: url("assets/dots-2.png"); */
+}
+
+
+.dot-background3 {
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0) 1%,
+            rgba(0, 0, 0, 1)), url("./assets/dots-2.png"); */
+    /* background-image: url("./assets/dots-2.png"); */
+
+}
