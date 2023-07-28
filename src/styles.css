@@ -27,6 +27,19 @@
     color: black;
 }
 
+ul {
+    list-style-type: disc;
+    padding-left: 1rem;
+}
+
+ul>li {
+    margin-bottom: 0.5rem;
+}
+
+ul>li:last-child {
+    margin-bottom: 0rem;
+}
+
 /* 
 .logo-background{
      background: linear-gradient(to top, rgba(0, 0, 0, 0) 1%,

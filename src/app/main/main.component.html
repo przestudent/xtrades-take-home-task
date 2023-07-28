@@ -4,15 +4,19 @@
       <img class="scale-125" src="/assets/Asset1.svg" alt="Crypto Traders" />
     </div>
     <div class="flex text-center gap-2 items-center flex-col justify-center">
-      <button
+      <a
+        [routerLink]="['/careers']"
         class="px-8 w-72 py-3 rounded-md flex gap-2 justify-center bg-accent-blue"
       >
         <img src="../../assets/discord-mark-white.svg" class="w-6" alt="" />
         <div>Continue with Discord</div>
-      </button>
-      <button class="px-8 w-72 py-3 text-black rounded-md bg-accent-green">
+      </a>
+      <a
+        [routerLink]="['/careers']"
+        class="px-8 w-72 py-3 text-black rounded-md bg-accent-green"
+      >
         Continue with Email
-      </button>
+      </a>
     </div>
   </div>
 </div>

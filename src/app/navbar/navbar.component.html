@@ -1,17 +1,21 @@
 <nav class="flex p-6 justify-between items-center">
-  <span>
-    <span class="pr-10">
-      <img class="inline-block pr-2" src="../../assets/Vector.svg" alt="Logo" />
+  <span class="flex items-center">
+    <span class="pr-10 flex items-center">
       <img
-        class="inline-block"
+        class="inline-block pr-2 w-8"
+        src="../../assets/Vector.svg"
+        alt="Logo"
+      />
+      <img
+        class="inline-block h-6"
         src="../../assets/Asset1.svg"
         alt="Crypto Traders"
       />
     </span>
-    <span class="text-sm">Home</span>
+    <a class="text-sm" [routerLink]="['/']">Home</a>
   </span>
   <span>
-    <button class="pr-2">
+    <a class="pr-2 inline-block" [routerLink]="['/careers']">
       <div
         class="p-[1px] bg-gradient-to-tr rounded-md from-accent-aqua to-accent-greener"
       >
@@ -19,7 +23,11 @@
           Membership
         </div>
       </div>
-    </button>
-    <button class="button-styler px-4 py-1 rounded-md">Login</button>
+    </a>
+    <a
+      [routerLink]="['/careers']"
+      class="inline-block button-styler px-4 py-1 rounded-md"
+      >Login</a
+    >
   </span>
 </nav>

@@ -8,6 +8,9 @@ import { MainComponent } from './main/main.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { HiringSectionComponent } from './hiring-section/hiring-section.component';
 import { HiringFooterComponent } from './hiring-footer/hiring-footer.component';
+import { HiringMainSectionComponent } from './hiring-main-section/hiring-main-section.component';
+import { CareersComponent } from './careers/careers.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { HiringFooterComponent } from './hiring-footer/hiring-footer.component';
     MainComponent,
     BottomComponent,
     HiringSectionComponent,
-    HiringFooterComponent
+    HiringFooterComponent,
+    HiringMainSectionComponent,
+    CareersComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

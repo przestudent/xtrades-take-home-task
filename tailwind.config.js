@@ -11,6 +11,7 @@ module.exports = {
         "accent-greener": "#04E08A",
         "accent-gray": "#14171a",
         "accent-border": "#2B2E30",
+        "accent-color-text": "#CCCCCC",
       },
     },
   },
