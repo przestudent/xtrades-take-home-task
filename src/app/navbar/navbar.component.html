@@ -1,33 +1,98 @@
-<nav class="flex p-6 justify-between items-center">
-  <span class="flex items-center">
-    <span class="pr-10 flex items-center">
-      <img
-        class="inline-block pr-2 w-8"
-        src="../../assets/Vector.svg"
-        alt="Logo"
-      />
-      <img
-        class="inline-block h-6"
-        src="../../assets/Asset1.svg"
-        alt="Crypto Traders"
-      />
+<ng-template [ngIf]="!isMobile" [ngIfElse]="mobile">
+  <nav class="flex p-6 justify-between items-center">
+    <span class="flex items-center">
+      <span class="pr-10 flex items-center">
+        <img
+          class="inline-block pr-2 w-8"
+          src="../../assets/Vector.svg"
+          alt="Logo"
+        />
+        <img
+          class="inline-block h-6"
+          src="../../assets/Asset1.svg"
+          alt="Crypto Traders"
+        />
+      </span>
+      <a class="text-sm" [routerLink]="['/']">Home</a>
     </span>
-    <a class="text-sm" [routerLink]="['/']">Home</a>
-  </span>
-  <span>
-    <a class="pr-2 inline-block" [routerLink]="['/careers']">
-      <div
-        class="p-[1px] bg-gradient-to-tr rounded-md from-accent-aqua to-accent-greener"
+    <span>
+      <a class="pr-2 inline-block" [routerLink]="['/careers']">
+        <div
+          class="p-[1px] bg-gradient-to-tr rounded-md from-accent-aqua to-accent-greener"
+        >
+          <div class="bg-black py-1 text-accent-greener rounded-md px-4">
+            Membership
+          </div>
+        </div>
+      </a>
+      <a
+        [routerLink]="['/careers']"
+        class="inline-block button-styler px-4 py-1 rounded-md"
+        >Login</a
       >
-        <div class="bg-black py-1 text-accent-greener rounded-md px-4">
-          Membership
+    </span>
+  </nav>
+</ng-template>
+
+<ng-template #mobile>
+  <nav class="p-6">
+    <button (click)="openModal()">
+      <img src="../../assets/hamburger.svg" alt="Menu" />
+    </button>
+  </nav>
+  <!-- <div *ngIf="isOpen" class="flex"> -->
+  <div *ngIf="isOpen" class="flex fixed z-50 top-0 left-0 w-full h-full">
+    <section class="bg-black w-[77%] flex justify-between p-6 h-full flex-col">
+      <div>
+        <div class="pb-8">
+          <img
+            class="block h-6"
+            src="../../assets/Asset1.svg"
+            alt="Crypto Traders"
+          />
+        </div>
+        <div class="text-lg">
+          <a class="block pb-4" [routerLink]="['/']">Home</a>
+          <a class="block" [routerLink]="['/careers']">Career</a>
         </div>
       </div>
-    </a>
-    <a
-      [routerLink]="['/careers']"
-      class="inline-block button-styler px-4 py-1 rounded-md"
-      >Login</a
-    >
-  </span>
-</nav>
+      <div>
+        <span class="font-semibold">
+          <a class="py-3 w-full block" [routerLink]="['/careers']">
+            <div
+              class="p-[1px] bg-gradient-to-tr rounded-xl from-accent-aqua to-accent-greener"
+            >
+              <div
+                class="bg-black py-3 flex justify-between text-accent-greener rounded-xl px-4"
+              >
+                <div>MEMBERSHIP</div>
+                <img src="../../assets/arrow-2.svg" alt=">" />
+              </div>
+            </div>
+          </a>
+          <a
+            [routerLink]="['/careers']"
+            class="button-styler flex justify-between px-4 py-3 rounded-xl w-full"
+          >
+            <div class="text-accent-blueish">MEMBERSHIP</div>
+            <img src="../../assets/arrow.svg" alt=">" />
+          </a>
+        </span>
+        <div class="text-xs text-center">
+          <div class="flex gap-x-4 justify-between py-4 gap-y-2">
+            <span>Privacy Policy</span>
+            <span>Refund Policy</span>
+            <span>Terms & Conditions</span>
+          </div>
+          <div class="opacity-50">
+            © Copyright 2022 - Xtrades. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="blur-xl bg-black opacity-90 w-[23%]" (click)="closeModal()">
+      bg
+    </div>
+  </div>
+</ng-template>

@@ -1,30 +1,53 @@
-<div class="w-[65%]">
-  <h1 class="text-4xl font-bold pb-10">We're Hiring</h1>
-  <div class="flex gap-16">
-    <aside class="font-normal">
-      <div class="border-t-2 text-sm border-accent-border py-3">
-        <div class="w-[16rem] font-semibold">
-          Film Editor and Creatorr for Trading Content
+<ng-template [ngIf]="!isMobile" [ngIfElse]="careersmobile"
+  ><div class="w-[65%]">
+    <h1 class="text-4xl font-bold pb-10">We're Hiring</h1>
+    <div class="flex gap-16">
+      <aside class="font-normal">
+        <div class="border-t-2 text-sm border-accent-border py-3">
+          <div class="w-[16rem] font-semibold">
+            Film Editor and Creatorr for Trading Content
+          </div>
         </div>
-      </div>
-      <div class="border-t-2 border-accent-border py-3">
-        <div class="w-[16rem] opacity-50">
-          Full Stack Principal Software Developer
+        <div class="border-t-2 border-accent-border py-3">
+          <div class="w-[16rem] opacity-50">
+            Full Stack Principal Software Developer
+          </div>
         </div>
-      </div>
-      <div class="border-t-2 border-accent-border py-3">
-        <div class="w-[16rem] opacity-50">
-          Sr Principal Software Engineer - C++ Programmer
+        <div class="border-t-2 border-accent-border py-3">
+          <div class="w-[16rem] opacity-50">
+            Sr Principal Software Engineer - C++ Programmer
+          </div>
         </div>
-      </div>
-    </aside>
-    <section
-      class="border-[1px] flex bg-accent-gray rounded-2xl text-accent-color-text border-accent-border"
-    >
-      <div class="border-r-2 border-accent-border">
-        <img src="../../assets/hiring-sesh.svg" alt="" />
-      </div>
-      <app-hiring-main-section></app-hiring-main-section>
-    </section>
+      </aside>
+      <section
+        class="border-[1px] flex bg-accent-gray rounded-2xl text-accent-color-text border-accent-border"
+      >
+        <div class="border-r-2 border-accent-border">
+          <img src="../../assets/hiring-sesh.svg" alt="" />
+        </div>
+        <app-hiring-main-section></app-hiring-main-section>
+      </section>
+    </div>
   </div>
-</div>
+</ng-template>
+<ng-template #careersmobile
+  ><div class="px-6 w-full">
+    <h1 class="text-2xl font-semibold pb-6">We're hiring</h1>
+    <div class="bg-accent-gray">
+      <div class="flex justify-between">
+        <div>Film Editor and Creator for Trading Content</div>
+        <img src="" alt="arrow" />
+      </div>
+      <!-- <div>
+        <h2 class="text-lg font-bold">
+          Hiring a Film Editor and Creator for Trading Content
+        </h2>
+        <div class="text-sm">
+          We're looking to increase our exposure on social media, by creating
+          more content (specifically Youtube Videos + shorts and Reels on
+          Instagram)
+        </div>
+      </div> -->
+      <app-hiring-main-section></app-hiring-main-section>
+    </div></div
+></ng-template>
