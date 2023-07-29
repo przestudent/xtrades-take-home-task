@@ -1,0 +1,10 @@
+.pulsing {
+    animation: pulsar 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+}
+
+@keyframes pulsar {
+    50% {
+        opacity: .85;
+    }
+}

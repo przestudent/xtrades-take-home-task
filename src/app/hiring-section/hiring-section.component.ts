@@ -11,7 +11,6 @@ export class HiringSectionComponent {
     this.isMobile = false;
   }
   ngOnInit() {
-    console.log('yup yup');
     const mql = window.matchMedia('(max-width:1280px)');
     if (mql.matches) {
       this.isMobile = true;
